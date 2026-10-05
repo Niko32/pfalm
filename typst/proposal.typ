@@ -1,28 +1,28 @@
-#import "@preview/bloated-neurips:0.8.0": appendix, neurips2026
+// This is a minimal starting document for tracl, a Typst style for ACL.
+// See https://typst.app/universe/package/tracl for details.
 
-#show: neurips2026.with(
-  title: [Formatting Instructions For NeurIPS 2026],
-  authors: (authors, affls),
-  keywords: ("Machine Learning", "NeurIPS"),
-  abstract: [
-    The abstract paragraph should be indented ½ inch (3 picas) on both the
-    left- and right-hand margins. Use 10 point type, with a vertical spacing
-    (leading) of 11 points. The word *Abstract* must be centered, bold, and in
-    point size 12. Two line spaces precede the abstract. The abstract must be
-    limited to one paragraph.
-  ],
-  bibliography: bibliography("main.bib"),
-  accepted: false,
-  font-config: (
-    family: (serif: ("Times New Roman", "Liberation Serif")),
-    size: (normal: 10pt),
+#import "@preview/tracl:0.8.1": *
+#import "@preview/pergamon:0.7.1": *
+
+#show: doc => acl(doc,
+  anonymous: false,
+  title: [Research Proposal: Immunogenicity Aware pLM],
+  authors: make-authors(
+    (
+      name: "Niko Konzack",
+      affiliation: [#email("niko.konzack@t-online.de")]
+    ),
   ),
 )
 
-#lorem(42)
+#abstract[
+  #lorem(50)
+]
 
-#show: appendix
+= Introduction
 
-= Technical Details
+#lorem(80)
 
-#lorem(42)
+// Uncomment this to include your bibliography:
+// #add-bib-resource(read("custom.bib"))
+// #print-acl-bibliography()
