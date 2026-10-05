@@ -1,0 +1,3 @@
+[submodule "typst/neurips-template"]
+	path = typst/neurips-template
+	url = https://github.com/daskol/typst-templates.git
